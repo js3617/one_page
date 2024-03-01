@@ -1,38 +1,354 @@
+@media (max-width: 1024px) {
+  .map {
+    width: 100%; /* 노트북이 작은 화면일 때 이미지 너비 조정 */
+    height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
+  }
+}
+
+@media (max-width: 768px) {
+  .map {
+    width: 100%; /* 노트북이 더 작은 화면일 때 이미지 너비 조정 */
+    height: auto; /* 높이를 자동으로 조정하여 비율 유지 */
+  }
+}
+
+@keyframes fadeInUp{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+
+* {
+padding: 0;
+margin: 0;
+color : white;
+list-style: none;
+}
+
+html, body {
+height: 100%;
+width: 100%;
+overflow-x: hidden;
+}
+
+.pages {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  bottom: 0;
+}
+
+.page {
+height: 100%;
+width: 100%;
+position: absolute;
+bottom: -100%;
+transition: bottom .7s;
+
+background-attachment: fixed;
+background-position: center;
+background-repeat: no-repeat;
+background-size: cover;
+
+}
+
+.page:first-child {
+bottom: 0;
+}
+
+/* .pagination>li {
+  list-style: none;
+}
+
+.pagination {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.pagination>li {
+  list-style: none;
+  height: 20px;
+  width: 20px;
+  background: #000000;
+  border-radius: 50%;
+  margin-top: 10px;
+  transition: background .7s;
+}
+
+.pagination>li.active {
+  background: #ffffff;
+} */
+
+
 .App {
   text-align: center;
+  background-color: #000000;
+  overflow-y: auto;
+  height: calc(var(--vh, 1vh) * 100);
 }
+/* 스크롤 바 */
+/* .App::-webkit-scrollbar {
+  display: none;
+} */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* GNB */
+.gnb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  z-index: 9999;
+  justify-content: space-between;
+  align-items: center;
+  background-color: transparent;
+}
+
+.gnb img {
+  width: 40.95px;
+  height: 30.2px;
+  margin: 10px;
+}
+
+.gnball {
+  display: flex;
+}
+
+.gnb-item {
+  margin-right: 50px;
+}
+
+.home {
+  margin-left: 50px;
+}
+
+.gnb-item a,
+.gnb a {
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 18px;
+  height: 60px;
+  padding-top: 15px;
+  text-decoration: none;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.joinbtn{
+  color: #FFFFFF;
+  font-size: 18px;
+  background-color: transparent;
+  border-color: #D38AFF;
+  color: #D38AFF;
+  border-radius: 5px;
+  padding: 3px;
+  cursor: pointer;
+}
+
+
+/* Frist */
+.Mainimg {
+  max-width: 100%;
+  max-height: auto;
+  height: 660px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+}
+
+.maincontent{
+  position: absolute;
+}
+
+.maintext{
+  position: relative;
+  color:white;
+  top: 200px;
+  cursor: default;
+}
+
+.Need, .insighttext{
+  font-size: 80px;
+  cursor: default;
+  animation: fadeInUp 6s;
+}
+.IT{
+  font-size: 23px;
+  cursor: default;
+  animation: fadeInUp 6s;
+}
+
+.insighttext {
+  color:#D38AFF;
+}
+
+/* Second */
+
+/* .container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+} */
+
+/* .map,
+.deu,
+.gather {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+} */
+
+/* .map {
+  width: 1440px;
+  height: 900px;
+} */
+
+/* .deu{
+  width: 600px;
+  height: 600x;
+  animation-name: fadein, fadeout;
+  animation-duration: 3s, 4s;
+  animation-fill-mode: forwards;
+} */
+
+/* .gather{
+  font-size: 48px;
+  font: bold;
+  animation: fadein 3s;
+  -webkit-animation: fadein 3s;
+} */
+
+/* third */
+
+.third {
+  position: relative;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 650px;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.fo {
+  font-size: 10;
+  font-weight: bold;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  /* animation: fadein 5s;
+  animation-fill-mode: forwards; */
+  opacity: 0;
+  transition: opacity 3s ease;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.insight {
+  width: 90px;
+  height: 50px;
+  position: relative;
+}
+
+#thirdlogo{
+  width: 700px;
+  height: 510px;
+  /* animation-name: zoomIn, fadeOut;
+  animation-duration: 3s, 3s;
+  animation-fill-mode: forwards; */
+  transform: scale(1);
+  opacity: 1;
+  margin-top: 52px;
+  transition: transform 5s ease, opacity 3s ease;
+}
+
+.intro {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  margin-top: 150px;
+  /* animation: zoomCut 3s;
+  animation-fill-mode: forwards; */
+  transform: scale(1);
+  transition: transform 3s ease;
+}
+
+
+
+.toptitle{
+  align-items: center;
+  text-align: center;
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 60px;
+  margin: 0 0 50px 0;
+  cursor: default;
   }
-  to {
-    transform: rotate(360deg);
-  }
+
+
+  /* four */
+
+.meain{
+  color: #D38AFF;
+  font-size: 48px;
+}
+
+.lifour {
+  margin-top: 150px;
+}
+
+.word {
+color: white;
+width: 100%;
+margin-bottom: 50px;
+}
+
+.meain, .line {
+margin: 10px 0;
+display: inline-block;
+margin-right: 10px;
+}
+
+.line {
+border: 1.7px dashed #fff;
+width: 100px;
+stroke-dasharray: none;
+}
+
+.word li {
+list-style: disc;
+list-style-position: inside;
+}
+
+.dot{
+  display: inline-block;
+}
+
+
+.line, .dot {
+  /* opacity: 0; */
+  transition: opacity 5s ease;
+}
+
+.word>ul>li {
+margin-top: 2px;
+}
+
+/* Five */
+
+.gCZIJs{
 }
