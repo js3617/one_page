@@ -1,4 +1,4 @@
-import { NavLink, Routes, Route } from 'react-router-dom';
+import { NavLink, Routes } from 'react-router-dom';
 import logo from './img/insight로고.png';
 
 function GNB() {
@@ -26,7 +26,7 @@ function GNB() {
                 </NavLink>
             </li>
             <li className="gnb-item">
-                <a href='https://forms.gle/BZDLTmMvgiozoQ2Y7'><button className='joinbtn'>JoinUs</button></a>
+                <a href='https://forms.gle/BZDLTmMvgiozoQ2Y7'><button className='joinbtn'>Join Us</button></a>
             </li>
           </ul>
           <Routes>

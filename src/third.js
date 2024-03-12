@@ -14,7 +14,7 @@ function Third() {
                 <img src={insight} alt='insight' className='insight' />
                 <p className='fo'>를 소개합니다</p>
             </div>
-        </div>
+        </div> 
     )
 }
 

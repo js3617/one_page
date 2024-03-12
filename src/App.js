@@ -1,11 +1,14 @@
 import React, { useEffect, useRef } from 'react';
 import './App.css';
 import Frist from './frist';
-import Second from './second';
+// import Second from './second';
 import Third from './third';
 import Four from './four';
 import Five from './five';
+import Six from './six';
+import Seven from './seven';
 import GNB from './GNB';
+
 
 function Slider() {
   // 변수 및 상태
@@ -50,8 +53,11 @@ function Slider() {
             element.style.transform = 'scale(3.5)';
             element.style.opacity = '1';
           });
-          slide.querySelectorAll('.line, .dot, .fo').forEach(element => {
+          slide.querySelectorAll('.fo, .fi, .fc, .fp').forEach(element => {
             element.style.opacity = '1';
+          });
+          slide.querySelectorAll('.fi, .fc, .fp').forEach(element => {
+            element.style.transform = 'translateZ(0)';
           });
         } else {
           slide.classList.remove('visible');
@@ -64,8 +70,11 @@ function Slider() {
             element.style.transform = 'scale(1)';
             element.style.opacity = '1';
           });
-          slide.querySelectorAll('.line, .dot, .fo').forEach(element => {
+          slide.querySelectorAll('.fo, .fi, .fc, .fp').forEach(element => {
             element.style.opacity = '0';
+          });
+          slide.querySelectorAll('.fi, .fc, .fp').forEach(element => {
+            element.style.transform = 'translate3d(0, 100%, 0)';
           });
         }
       });
@@ -116,6 +125,10 @@ function Slider() {
         <Five />
       </div>
       <div className="five page">
+        <Six />
+      </div>
+      <div className="six page">
+        
       </div>
     </div>
   );
