@@ -16,6 +16,7 @@ import 조수진Image from './Memberimg/조수진.jpg';
 import 박상현Image from './Memberimg/박상현.jpg';
 import 김희준Image from './Memberimg/김희준.jpg';
 import 김민경Image from './Memberimg/김민경.jpg';
+import 유소혜Image from './Memberimg/유소혜.jpg';
 
 let memberdata  = [
     {
@@ -186,7 +187,7 @@ let memberdata  = [
         major : "로봇자동화공학과",
         grade : "3학년",
         Interests : "Robotics",
-        imageUrl: Insight
+        imageUrl: 유소혜Image
     },
     {
         id : 17,
