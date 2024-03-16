@@ -1,9 +1,9 @@
-import { NavLink, Routes } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'; // Routes와 Route로 변경
 import logo from './img/insight로고.png';
 
 function GNB() {
     const activeStyle = {
-      color: 'purple',
+      color: '#7F2BE2',
     };
     
     return(
@@ -29,10 +29,6 @@ function GNB() {
                 <a href='https://forms.gle/BZDLTmMvgiozoQ2Y7'><button className='joinbtn'>Join Us</button></a>
             </li>
           </ul>
-          <Routes>
-            {/* <Route path='/AboutMain' element={<AboutMain />}></Route>
-            <Route path='/Activity' element={<AboutMain />}></Route> */}
-          </Routes>
       </div>
     )
 }

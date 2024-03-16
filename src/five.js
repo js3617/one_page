@@ -10,6 +10,7 @@ import bg7 from "./img/ppt2.png";
 import bg8 from "./img/ppt3.png";
 import bg9 from "./img/ppt4.png";
 import bg10 from "./img/ppt5.png";
+import bg11 from "./img/ppt6.png";
 import study from "./img/study.png";
 import project from "./img/hand.png";
 import activity from "./img/factivity.png";
@@ -18,7 +19,7 @@ const Letters = styled.div`
   position: absolute;
   top: 10%;
   left: 5%;
-  color: #D38AFF;
+  color: #7F2BE2;
   z-index: 100;
   font-size: 80px;
   font-weight: bold;
@@ -117,6 +118,7 @@ const bgArr = [
   { img: bg8, key: 18 },
   { img: bg9, key: 19 },
   { img: bg10, key: 20 },
+  { img: bg11, key: 21 },
 ];
 
 const imgList = [study, project, activity];

@@ -6,8 +6,10 @@ import Third from './third';
 import Four from './four';
 import Five from './five';
 import Six from './six';
-import Seven from './seven';
+import Footer from './Footer'
 import GNB from './GNB';
+import { Routes, Route } from 'react-router-dom';
+import Member from './Members';
 
 
 function Slider() {
@@ -56,7 +58,7 @@ function Slider() {
           slide.querySelectorAll('.fo, .fi, .fc, .fp').forEach(element => {
             element.style.opacity = '1';
           });
-          slide.querySelectorAll('.fi, .fc, .fp').forEach(element => {
+          slide.querySelectorAll('.fc, .fp').forEach(element => {
             element.style.transform = 'translateZ(0)';
           });
         } else {
@@ -73,7 +75,7 @@ function Slider() {
           slide.querySelectorAll('.fo, .fi, .fc, .fp').forEach(element => {
             element.style.opacity = '0';
           });
-          slide.querySelectorAll('.fi, .fc, .fp').forEach(element => {
+          slide.querySelectorAll('.fc, .fp').forEach(element => {
             element.style.transform = 'translate3d(0, 100%, 0)';
           });
         }
@@ -115,7 +117,6 @@ function Slider() {
         <Frist />
       </div>
       <div className="second page">
-        {/* <Second /> */}
         <Third />
       </div>
       <div className="third page">
@@ -128,7 +129,7 @@ function Slider() {
         <Six />
       </div>
       <div className="six page">
-        
+        <Footer />
       </div>
     </div>
   );
@@ -138,7 +139,10 @@ function App() {
   return (
     <div className="App">
       <GNB />
-      <Slider />
+      <Routes>
+        <Route path="/" element={<Slider />} />
+        <Route path="/members" element={<Member />} />
+      </Routes>
     </div>
   );
 }
