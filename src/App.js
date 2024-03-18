@@ -6,7 +6,7 @@ import Third from './third';
 import Four from './four';
 import Five from './five';
 import Six from './six';
-import Footer from './Footer'
+import Footer from './Footer';
 import GNB from './GNB';
 import { Routes, Route } from 'react-router-dom';
 import Member from './Members';
