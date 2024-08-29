@@ -9,7 +9,7 @@ import web from './img/web.png';
 const imgList = [active, robot, game, web];
 
 const SixContent = styled.div`
-    height: 1024px;
+    height: 100%;
 `
 
 const Title = styled.h2`
@@ -21,6 +21,19 @@ const Title = styled.h2`
     line-height: 60px;
     margin: 50px 0 50px 0;
     cursor: default;
+    @media (max-width: 768px){
+    font-size: 1.5rem;
+    margin-top: 15%;
+    margin-bottom: 0;
+  }
+  @media (max-width: 1023px){
+    font-size: 2rem;
+    margin-top: 15%;
+    margin-bottom: 0;
+  }
+  @media (max-width: 1200px) {
+        font-size: 2rem;
+    }
 `;
 
 const Container = styled.div`
@@ -28,6 +41,11 @@ const Container = styled.div`
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row-gap: 30px;
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
 `;
 
 const Card = styled.div`
@@ -48,6 +66,13 @@ const Card = styled.div`
         width: 100%;
         object-fit: cover;
     }
+
+    @media (max-width: 768px) {
+        height: 18vh;
+        width: 100%;
+        z-index: 5;
+    }
+
 `;
 
 const CardContent = styled.div`
@@ -63,16 +88,28 @@ const CardContent = styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    z-index: 1;
 `;
 
 const Cardbigp = styled.p`
     display: inline-block;
-    float: left;
-    font-size: 2vw;
+    text-align: left;
+    font-size: 1.8rem;
     height: 10vw;
     text-align: center;
     color: #fff;
     white-space: pre-line;
+    @media (max-width: 768px) {
+        font-size: 0.8rem;
+        margin-bottom: 70px;
+    }
+    @media (max-width: 1023px) {
+        font-size: 1rem;
+        margin-bottom: 70px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 1.2rem;
+    }
 `;
 
 const Cardp = styled.p`
@@ -89,14 +126,37 @@ const Cardp = styled.p`
     ${Card}:hover & {
         opacity: 1;
     }
+    @media (max-width: 768px) {
+        font-size: 0.5rem;
+        line-height: 1rem;
+    }
+    @media (max-width: 1023px) {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    @media (max-width: 1200px) {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
 `;
 
 const Cardlp = styled.p`
-    font-size: 1.3vw;
-    line-height: 2vw;
+    font-size: 1rem;
+    line-height: 2rem;
     color: #fff;
     white-space: pre-line;
     justify-content: flex-start;
+    @media (max-width: 768px) {
+        font-size: 0.55rem;
+        line-height: 1rem;
+    }
+    @media (max-width: 1024px) {
+        font-size: 0.8rem;
+        line-height: 1.5rem;
+    }
+    @media (max-width: 1200px) {
+        font-size: 0.8rem;
+    }
 `;
 
 const Cardtitle = styled.p`
@@ -110,6 +170,20 @@ const Cardtitle = styled.p`
     transition: all 0.3s ease-out;
     ${Card}:hover & {
     transform: translateY(-100%);
+    }
+
+    @media (max-width: 768px) {
+        font-size: 2rem;
+        line-height: 5px;
+    }
+    @media (max-width: 1023px) {
+        font-size: 1.8rem;
+        line-height: 5px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 1.8rem;
+        line-height: 5px;
+    }
 `;
 
 const Cardbutton = styled.button`
@@ -129,6 +203,15 @@ const Cardbutton = styled.button`
     transition: opacity 0.3s ease;
     ${Card}:hover & {
         opacity: 1;
+    }
+
+    @media (max-width: 768px) {
+        font-size: 0.7rem;
+        height: 25px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 0.8rem;
+        line-height: 5px;
     }
 `;
 
@@ -154,12 +237,21 @@ const NewCard = styled.div`
         height: 100%;
         max-width: 100%;
         max-height: 100%;
+
+        @media (max-width: 768px) {
+        height: 40%;
+        top: 130px;
+        }
+    }
+    @media (max-width: 768px) {
+        height: 100%; /* 높이 자동 조정 */
+        width: 100%; /* 최대 너비를 100%로 설정 */
     }
 `;
 
 const NewCardtitle = styled.p`
     display: flex;
-    font-size: 2.7vw;
+    font-size: 3rem;
     font-weight: 700;
     justify-content: center;
     left: 0;
@@ -167,6 +259,17 @@ const NewCardtitle = styled.p`
     color: #fff;
     text-align: left;
     float: left;
+    @media (max-width: 767px) {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+    @media (max-width: 1023px) {
+        font-size: 2rem;
+        margin-top: 30px;
+    }
+    @media (max-width: 1200px) {
+        font-size: 2rem;
+    }
 `;
 const NewCardContent = styled.div`
     position: relative;
@@ -184,7 +287,10 @@ const NewCardContent = styled.div`
     align-items: flex-start;
     text-align: left;
     padding: 4vw 6vw 6vw 4vw;
+    z-index: 999; /* NewCard의 z-index가 BsXLgContainer보다 낮게 설정 */
+    pointer-events: auto; /* 클릭 가능하도록 설정 */
 `;
+
 
 const BsXLgContainer = styled.div`
     position: absolute;
@@ -192,6 +298,11 @@ const BsXLgContainer = styled.div`
     right: 0;
     margin-top: 10px;
     margin-right: 25px;
+    z-index: 1000;
+    @media (max-width: 768px) {
+        right: -18.5rem;
+        z-index: 99999;
+    }
 `;
 
 const departments = [
@@ -246,24 +357,26 @@ const Six = () => {
     return (
         <SixContent>
             <Title>Insight의 부서를 소개합니다</Title>
-            <Container>
-                {departments.map((department, index) => (
-                    <Card key={index} visible={!selectedDepartment || showCard}>
-                        <img src={imgList[index]} alt='active' />
-                        <CardContent>
-                            <Cardtitle>{department.title}</Cardtitle>
-                            <Cardp>{department.description}</Cardp>
-                            <Cardbutton onClick={() => showDetails(department)}>상세보기</Cardbutton>
-                        </CardContent>
-                    </Card>
-                ))}
-            </Container>
+            {showCard && (
+                <Container>
+                    {departments.map((department, index) => (
+                        <Card key={index} visible={!selectedDepartment || showCard}>
+                            <img src={imgList[index]} alt='active' />
+                            <CardContent>
+                                <Cardtitle>{department.title}</Cardtitle>
+                                <Cardp>{department.description}</Cardp>
+                                <Cardbutton onClick={() => showDetails(department)}>상세보기</Cardbutton>
+                            </CardContent>
+                        </Card>
+                    ))}
+                </Container>
+            )}
             {selectedDepartment && (
                 <NewCard>
                     <img src={imgList[departments.findIndex(dep => dep.title === selectedDepartment.title)]} alt='card' />
                     <NewCardContent>
-                        <BsXLgContainer>
-                            <BsXLg style={{ cursor: 'pointer', maxHeight: '20px', maxWidth: '20px' }} onClick={hideDetails} />
+                        <BsXLgContainer onClick={hideDetails}>
+                            <BsXLg style={{ cursor: 'pointer', maxHeight: '20px', maxWidth: '20px' }} />
                         </BsXLgContainer>
                         <NewCardtitle>{selectedDepartment.title}</NewCardtitle>
                         <br/>
@@ -274,11 +387,12 @@ const Six = () => {
                         <Cardlp>{selectedDepartment.requiredSkills}</Cardlp>
                         <br/>
                         <Cardlp>{selectedDepartment.members}</Cardlp>
-                    </NewCardContent>
+                    </NewCardContent> 
                 </NewCard>
             )}
         </SixContent>
     );
 };
+
 
 export default Six;

@@ -13,36 +13,29 @@
     font-size: 20px;
     margin: 0;
   }
-  .intro>.insight{
-    width: 60px;
-    height: 60px;
-  }
-  .intro>.fo{
-    font-size: 20px;
-  }
   .four>.title{
     margin-top: 40%;
   }
   .four> .title{
-    font-size: 45px;
+    font-size: 2.2rem;
   }
   .fi>.meain{
-    font-size: 45px;
+    font-size: 2.2rem;
   }
   .fc>.meain{
-    font-size: 45px;
+    font-size: 2.2rem;
   }
   .fp>.meain{
-    font-size: 30px;
+    font-size: 2rem;
   }
   .fi>.fw{
-    font-size: 20px;
+    font-size: 0.9rem;
   }
   .fc>.fw{
-    font-size: 20px;
+    font-size: 0.9rem;
   }
   .fp>.fw{
-    font-size: 20px;
+    font-size: 0.9rem;
   }
 }
 @media (max-height: 375px) {
@@ -108,9 +101,11 @@ list-style: none;
 }
 
 html, body {
-height: 100%;
+height: auto;
+min-height: 100%;
 width: 100%;
 overflow-x: hidden;
+overflow-y: auto;
 }
 
 .pages {
@@ -123,9 +118,10 @@ overflow-x: hidden;
 
 .page {
 height: 100%;
+min-height: 100vh;
 width: 100%;
 position: absolute;
-bottom: -100%;
+bottom: auto;
 transition: bottom .7s;
 
 background-attachment: fixed;
@@ -168,8 +164,7 @@ bottom: 0;
 .App {
   text-align: center;
   background-color: #000000;
-  overflow-y: auto;
-  height: calc(var(--vh, 1vh) * 100);
+  
 }
 /* 스크롤 바 */
 .App::-webkit-scrollbar {
@@ -177,6 +172,12 @@ bottom: 0;
 }
 
 /* GNB */
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
 .gnb {
   position: fixed;
   top: 0;
@@ -189,8 +190,18 @@ bottom: 0;
 }
 
 .gnb:hover{
-  transition: 0.5s ease-out;
   background-color: rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease-out;
+}
+
+.gnblogo{
+  display: flex;
+  justify-content: start;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    padding: 1px;
+    margin: 1px;
+  }
 }
 
 .gnb img {
@@ -207,20 +218,30 @@ bottom: 0;
 
 .gnb-item {
   margin-right: 50px;
+  @media (max-width: 768px) {
+    margin: 10px;
+  }
 }
 
 .home {
   margin-left: 50px;
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 }
 
 .gnb-item a,
 .gnb a {
   color: #FFFFFF;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 1.5rem;
   height: 60px;
   padding-top: 15px;
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 0.8rem;
+  }
 }
 
 .logo-container {
@@ -238,6 +259,12 @@ bottom: 0;
   border: #7F2BE2 3px solid;
   padding: 6px 15px;
   cursor: pointer;
+  @media (max-width: 768px) {
+    font-size: 0.6rem;
+    padding: 5px;
+    border-radius: 10px;
+    border: #7F2BE2 1px solid;
+  }
 }
 
 .joinbtn:hover { 
@@ -270,17 +297,27 @@ bottom: 0;
   top: 30%;
   right: 2%;
   cursor: default;
+  @media (max-width: 768px) {
+    right: 0;
+    top: 40%;
+  }
 }
 
 .Need, .insighttext{
   font-size: 80px;
   cursor: default;
   animation: fadeInUp 3s;
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 }
 .IT{
   font-size: 23px;
   cursor: default;
   animation: fadeInUp 3s;
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 }
 
 .insighttext {
@@ -346,12 +383,20 @@ bottom: 0;
   animation-fill-mode: forwards; */
   opacity: 0;
   transition: opacity 3s ease;
+
+  @media (max-width: 768px){
+   font-size: 0.8rem;
+  }
 }
 
 .insight {
   width: 90px;
   height: 50px;
   position: relative;
+  @media (max-width: 768px){
+    width: 1rem;
+    height: 5%;
+   }
 }
 
 #thirdlogo{
@@ -379,6 +424,22 @@ bottom: 0;
   transition: transform 3s ease;
 }
 
+@media (max-width: 768px) {
+  .third {
+    flex-direction: column;
+  }
+
+  .intro {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  #thirdlogo {
+    width: 100%; /* 작은 화면에서는 이미지 크기 줄임 */
+    margin-top: 20px;
+  }
+}
+
 
   /* four */
 
@@ -394,17 +455,42 @@ bottom: 0;
   color: #7F2BE2;
   font-size: 80px;
   font-weight: 700;
+  @media (max-width: 768px){
+    font-size: 1rem;
+    line-height: 2rem;
+   }; 
+  @media (max-width: 1200px) {
+    font-size: 2.5rem;
+    margin-top: 5%;
+}
 }
 
 .title{
   font-size: 56px;
   font-weight: 700;
+  @media (max-width: 768px){
+    font-size: 0.5rem;
+    line-height: 1rem;
+   };
+   
+  @media (max-width: 1200px) {
+    font-size: 2.4rem;
+    line-height: 2rem;
+  }
 }
 
 .fw{
   font-size: 24px;
   line-height: 50px;
   margin-bottom: 40px;
+  @media (max-width: 768px){
+    font-size: 1rem;
+    line-height: 2rem;
+   };
+  @media (max-width: 1200px) {
+    font-size: 1.2rem;
+    line-height: 3rem;
+}
 }
 
 .fi {

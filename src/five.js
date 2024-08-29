@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef } from "react";
-import styled from "styled-components";
+import React, { useState, useEffect } from "react";
+import styled, { keyframes } from "styled-components";
 import bg1 from "./img/rock.png";
 import bg2 from "./img/racing.png";
 import bg3 from "./img/code.png";
@@ -15,11 +15,16 @@ import study from "./img/study.png";
 import project from "./img/hand.png";
 import activity from "./img/factivity.png";
 
+const infiniteSlide = keyframes`
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+`;
+
 const Letters = styled.div`
   position: absolute;
   top: 10%;
   left: 5%;
-  color: #7F2BE2;
+  color: #7f2be2;
   z-index: 100;
   font-size: 80px;
   font-weight: bold;
@@ -28,6 +33,14 @@ const Letters = styled.div`
   &.active {
     opacity: 1;
   }
+  @media (max-width: 768px) {
+    margin-top: 15%;
+    font-size: 3rem;
+    left: 0;
+  }
+  @media (max-width: 1200px) {
+        font-size: 4rem;
+    }
 `;
 
 const DescriptionOverlay = styled.div`
@@ -44,6 +57,14 @@ const DescriptionOverlay = styled.div`
   &.active {
     opacity: 1;
   }
+  @media (max-width: 768px) {
+    font-size: 1rem;
+    color: #ffffff;
+  }
+  @media (max-width: 1200px) {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
 `;
 
 const Background = styled.div`
@@ -52,6 +73,12 @@ const Background = styled.div`
   position: absolute;
   bottom: 0;
   display: flex;
+  @media (max-width: 768px) {
+    height: 250px;
+  }
+  @media (max-width: 1200px) {
+        height: 250px;
+    }
 `;
 
 const BackgroundImage = styled.img`
@@ -71,12 +98,13 @@ const ImgContainer = styled.div`
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 200%;
   height: 100%;
   display: flex;
   justify-content: center;
   z-index: 999;
   align-items: center;
+  animation: ${infiniteSlide} 20s linear infinite;
 `;
 
 const ImgBox = styled.div`
@@ -87,15 +115,24 @@ const ImgBox = styled.div`
   position: relative;
   height: 360px;
   background-color: rgba(0, 0, 0, 0.6);
+
   img {
     margin-left: 20px;
     background-color: rgba(0, 0, 0, 0.6);
     width: 400px;
     height: 215px;
     object-fit: cover;
+
+    @media (max-width: 768px) {
+      width: 300px;
+      height: 150px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 300px;
   }
 `;
-
 
 const bgArr = [
   { img: bg1, key: 1 },
@@ -108,17 +145,7 @@ const bgArr = [
   { img: bg8, key: 8 },
   { img: bg9, key: 9 },
   { img: bg10, key: 10 },
-  { img: bg1, key: 11 },
-  { img: bg2, key: 12 },
-  { img: bg3, key: 13 },
-  { img: bg4, key: 14 },
-  { img: bg5, key: 15 },
-  { img: bg6, key: 16 },
-  { img: bg7, key: 17 },
-  { img: bg8, key: 18 },
-  { img: bg9, key: 19 },
-  { img: bg10, key: 20 },
-  { img: bg11, key: 21 },
+  { img: bg11, key: 11 },
 ];
 
 const imgList = [study, project, activity];
@@ -132,26 +159,7 @@ const wordList = [
 ];
 
 function Five() {
-  const [slideIndex, setSlideIndex] = useState(0);
-  const [slideInterval, setSlideInterval] = useState(1500);
-
-  //배경 이미지
   const [imgIndex, setImgIndex] = useState(0);
-
-  const slideRef = useRef(null);
-
-  const BG_NUM = bgArr.length;
-  const beforeSlide = bgArr[BG_NUM - 1];
-  const afterSlide = bgArr[0];
-
-  let slideArr = [beforeSlide, ...bgArr, afterSlide];
-  const SLIDE_NUM = slideArr.length;
-
-  // 이미지 넘어가는 개수
-  useEffect(() => {
-    const id = setInterval(() => setSlideIndex((prev) => prev + 1), slideInterval);
-    return () => clearInterval(id);
-  }, [slideInterval]);
 
   //배경 이미지에 대한 코드
   useEffect(() => {
@@ -161,59 +169,30 @@ function Five() {
     return () => clearInterval(interval);
   }, []);
 
-  const InfiniteSlideHandler = (flytoIndex) => {
-    setTimeout(() => {
-      if (slideRef.current) {
-        slideRef.current.style.transition = "";
-      }
-      setSlideIndex(flytoIndex);
-      setTimeout(() => {
-        if (slideRef.current) {
-          slideRef.current.style.transition = "all 500ms linear";
-        }
-      });
-    }, 500);
-  };
-
-  if (slideIndex === SLIDE_NUM - 1) {
-    InfiniteSlideHandler(1);
-  }
-  //갱신되는 이미지 위치
-
-  if (slideIndex === 0) {
-    InfiniteSlideHandler(BG_NUM);
-  }
-
   return (
     <>
       <div className='gradient_background'></div>
       {imgList.map((img, index) => (
         <>
-        <BackgroundImage
-          key={`img-${index}`}
-          className={`fimg ${index === imgIndex ? "active" : ""}`}
-          src={img}
-          alt={`img-${index}`}
-        />
-        <Letters className={index === imgIndex ? "active" : ""}>
-          {keyList[index]}
-        </Letters>
-        <DescriptionOverlay className={index === imgIndex ? "active" : ""}>
-         {wordList[index]}
-        </DescriptionOverlay>
+          <BackgroundImage
+            key={`img-${index}`}
+            className={`fimg ${index === imgIndex ? "active" : ""}`}
+            src={img}
+            alt={`img-${index}`}
+          />
+          <Letters className={index === imgIndex ? "active" : ""}>
+            {keyList[index]}
+          </Letters>
+          <DescriptionOverlay className={index === imgIndex ? "active" : ""}>
+            {wordList[index]}
+          </DescriptionOverlay>
         </>
       ))}
       <Background>
-      <div className='gradient_backgroundl'></div>
-      <div className='gradient_backgroundr'></div>
-        <ImgContainer
-          ref={slideRef}
-          style={{
-            transition: "all 0 linear",
-            transform: `translateX(${-1 * ((300 / slideArr.length) * slideIndex)}%)`,
-          }}
-        >
-          {slideArr.map((item, index) => (
+        <div className='gradient_backgroundl'></div>
+        <div className='gradient_backgroundr'></div>
+        <ImgContainer>
+          {bgArr.concat(bgArr).map((item, index) => (
             <ImgBox key={index}>
               <img src={item.img} alt={`slide-${index}`} />
             </ImgBox>
