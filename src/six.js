@@ -28,7 +28,7 @@ const Title = styled.h2`
   }
   @media (max-width: 1023px){
     font-size: 2rem;
-    margin-top: 15%;
+    margin-top: 10%;
     margin-bottom: 0;
   }
   @media (max-width: 1200px) {
@@ -99,15 +99,15 @@ const Cardbigp = styled.p`
     text-align: center;
     color: #fff;
     white-space: pre-line;
-    @media (max-width: 768px) {
+    @media all and (min-width:480px) and (max-width:767px) {
         font-size: 0.8rem;
         margin-bottom: 70px;
     }
-    @media (max-width: 1023px) {
+    @media all and (min-width: 768px) and (max-width: 1023px) {
         font-size: 1rem;
         margin-bottom: 70px;
     }
-    @media (max-width: 1200px) {
+    @media all and (min-width:1024px) and (max-width:1279px) {
         font-size: 1.2rem;
     }
 `;
@@ -126,15 +126,15 @@ const Cardp = styled.p`
     ${Card}:hover & {
         opacity: 1;
     }
-    @media (max-width: 768px) {
+    @media all and (min-width:480px) and (max-width:767px) {
         font-size: 0.5rem;
         line-height: 1rem;
     }
-    @media (max-width: 1023px) {
+    @media all and (min-width:768px) and (max-width:1023px) {
         font-size: 0.8rem;
         line-height: 1.5rem;
     }
-    @media (max-width: 1200px) {
+    @media all and (min-width:1024px) and (max-width:1279px) {
         font-size: 0.8rem;
         line-height: 1.5rem;
     }
@@ -172,16 +172,16 @@ const Cardtitle = styled.p`
     transform: translateY(-100%);
     }
 
-    @media (max-width: 768px) {
+    @media all and (min-width:480px) and (max-width:767px) {
         font-size: 2rem;
         line-height: 5px;
     }
-    @media (max-width: 1023px) {
+    @media  all and (min-width:768px) and (max-width:1023px) {
         font-size: 1.8rem;
         line-height: 5px;
     }
-    @media (max-width: 1200px) {
-        font-size: 1.8rem;
+    @media all and (min-width:1024px) and (max-width:1279px) {
+        font-size: 1.2rem;
         line-height: 5px;
     }
 `;
@@ -264,7 +264,7 @@ const NewCardtitle = styled.p`
         margin-top: 30px;
     }
     @media (max-width: 1023px) {
-        font-size: 2rem;
+        font-size: 1rem;
         margin-top: 30px;
     }
     @media (max-width: 1200px) {
@@ -323,12 +323,12 @@ const departments = [
         members: "[부서원]\n김민경, 최홍록, 강현재, 유소혜, 황설이, 김봉주"
     },
     {
-        title: "게임",
-        motive: "2D, 3D, VR등 여러 환경의 게임 개발을 경험할 수 있는 부서입니다",
-        description: "Unity엔진을 기반으로\n2D, 3D, VR등 여러 환경에서\n게임 개발을 하는 부서입니다.",
-        coreActivity: "[핵심 활동]\n2023년 - Python 라이브러리인 Pygame과 OpenCV를 활용하여\n모션인식을 통한 리듬게임 제작.\nVR기기를 활용하여 디펜스 게임 제작.\n2024년 - 제작하고 싶은 게임을 기획한 후,\nUnity Engine을 활용하여 게임을 개발 예정",
-        requiredSkills: "[필요 역량]\n게임 시스템에 대한 이해도, 게임 개발에 대한 흥미, 컴퓨터 언어를 사용가능 또는 게임 기획에 관심",
-        members: "[부서원]\n신승우, 유민형, 박상현, 한유민"
+        title: "AR / XR",
+        motive: "Unity를 활용하여XR/AR/VR 관련 프로젝트를\n기획하고 개발하는 부서입니다.",
+        description: "Unity를 활용하여\nXR/AR/VR 관련 프로젝트를\n기획하고 개발하는 부서입니다",
+        coreActivity: "[핵심 활동]\n2023-겨울방학 때 VR 디펜스 게임을 제작 하며Unity와 VR에 기술 스택을 쌓아 왔으며,\n2024-Vision Pro XR IDEA Challenge에 참가하여 XR에 관한 아이디어를 기획 해보며,\n제 12회-K-Hackathon에 참가하여 가상현실(VR)로 배우는 체험형 비행 안전 교육 시뮬레이션을 제작하여 본선에 출전하였습니다.\n이후 VR 디펜스 게임과 비행 안전 교육 시뮬레이션을 계속해서\n개발을 진행하여 다양한 공모전에 참가 예정입니다.",
+        requiredSkills: "[필요 역량]\nUnity, C# 등 개발 및 사용 경험이 있거나 XR/AR/VR에 대한 관심과 열정",
+        members: "[부서원]\n한유민"
     },
     {
         title: "웹",

@@ -86,7 +86,7 @@ let memberdata  = [
         name : "임성룡",
         major : "산업ICT기술공학과",
         grade : "4학년",
-        Interests : "Back-End",
+        Interests : "Back-End, Data analysis",
         imageUrl: Insight
     },
     {
@@ -136,7 +136,7 @@ let memberdata  = [
         name : "최영미",
         major : "컴퓨터공학과",
         grade : "4학년",
-        Interests : "Back-End, AI Engineering",
+        Interests : "NLP, Computer Vision, HCI",
         imageUrl: 최영미Image
     },
     {
@@ -146,7 +146,7 @@ let memberdata  = [
         name : "박재성",
         major : "산업ICT기술공학과",
         grade : "4학년",
-        Interests : "Front-End",
+        Interests : "Front-End, UX/UI",
         imageUrl : 재성Image
     },
     {
@@ -155,7 +155,7 @@ let memberdata  = [
         position : "",
         name : "이정훈",
         major : "컴퓨터공학과",
-        grade : "3학년(휴학)",
+        grade : "3학년(군휴학)",
         Interests : "Computer Science",
         imageUrl : 이정훈Image
     },
@@ -196,18 +196,8 @@ let memberdata  = [
         name : "전혜리",
         major : "인공지능학과",
         grade : "3학년",
-        Interests : "AI Engineering",
+        Interests : "AI, Healthcare, Data Analysis",
         imageUrl : 전혜리Image
-    },
-    {
-        id : 18,
-        department : "Web Part",
-        position : "",
-        name : "황설이",
-        major : "컴퓨터공학과",
-        grade : "2학년",
-        Interests : "Back-End",
-        imageUrl: Insight
     },
     {
         id : 19,

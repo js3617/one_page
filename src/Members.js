@@ -81,6 +81,7 @@ const Title = styled.h2`
   font-weight: 700;
   font-size: 48px;
   line-height: 60px;
+  padding-top: 5%;
   cursor: default;
   @media (max-width: 768px) {
     font-size: 1.5rem;
