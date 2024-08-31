@@ -361,7 +361,10 @@ const Six = () => {
             {showCard && (
                 <Container>
                     {departments.map((department, index) => (
-                        <Card key={index} visible={!selectedDepartment || showCard}>
+                        <Card key={index} visible={!selectedDepartment || showCard}
+                            onWheel={(e) => e.stopPropagation()}
+                            onTouchMove={(e) => e.stopPropagation()}
+                            onTouchStart={(e) => e.stopPropagation()}>
                             <img src={imgList[index]} alt='active' />
                             <CardContent>
                                 <Cardtitle>{department.title}</Cardtitle>

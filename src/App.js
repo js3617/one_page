@@ -74,7 +74,6 @@ function Slider() {
 
   const handleTouchStart = (e) => (touchstart = e.touches[0].screenY);
   const handleTouchEnd = (e) => {
-    if (slides[current]?.classList.contains('six')) return;
 
     if (touchstart < e.changedTouches[0].screenY) {
       gotoPrev();
