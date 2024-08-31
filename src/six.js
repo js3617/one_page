@@ -313,7 +313,7 @@ const departments = [
         description: "창업을 위한 교육부터\n실제 창업에 대한 멘토링뿐만 아니라\n다양한 지원을 받으며 활동을 하는 부서입니다.",
         coreActivity: "[핵심 활동]\n2023년 - 2023 학생 창업 유망팀 300 대회 교육트랙 과정을 참가하여,\n산학협력 엑스포 학생창업 페스티벌 교육트랙 미니 데모데이 참여 10팀에 선정되었으며,\n창업에 필요한 지식을 쌓고 경험을 했습니다.\n또 동의대학교에서 주관한 창업 관련 대회에 출전하여 수상했으며\n2024년 학생 창업 유망팀 300대회 성장트랙에 참가 예정입니다",
         requiredSkills: "[필요 역량]\n창의적인 아이디어와 이를 구현할 수 있도록 노력하는 끈기, 창업에 대한 관심",
-        members: "[부서원]\신승우, 박상현, 한유민, 정시영, 유소혜"
+        members: "[부서원]\n신승우, 박상현, 한유민, 정시영, 유소혜"
     },
     {
         title: "로봇",
@@ -341,7 +341,7 @@ const departments = [
     }
 ];
 
-const Six = () => {
+const Six = ({stopSliderTouchEnd }) => {
     const [selectedDepartment, setSelectedDepartment] = useState(null);
     const [showCard, setShowCard] = useState(true);
 
@@ -355,16 +355,22 @@ const Six = () => {
         setShowCard(true);
     };
 
+    const stopScrollPropagation = (e) => {
+        e.stopPropagation();
+    };
+
+
     return (
         <SixContent>
             <Title>Insight의 부서를 소개합니다</Title>
             {showCard && (
                 <Container>
                     {departments.map((department, index) => (
-                        <Card key={index} visible={!selectedDepartment || showCard}
-                            onWheel={(e) => e.stopPropagation()}
-                            onTouchMove={(e) => e.stopPropagation()}
-                            onTouchStart={(e) => e.stopPropagation()}>
+                        <Card key={index}
+                            visible={!selectedDepartment || showCard}
+                            onTouchEnd={(e) => {
+                            stopSliderTouchEnd(e);
+                        }}>
                             <img src={imgList[index]} alt='active' />
                             <CardContent>
                                 <Cardtitle>{department.title}</Cardtitle>
@@ -378,7 +384,9 @@ const Six = () => {
             {selectedDepartment && (
                 <NewCard>
                     <img src={imgList[departments.findIndex(dep => dep.title === selectedDepartment.title)]} alt='card' />
-                    <NewCardContent>
+                    <NewCardContent 
+                        onTouchEnd={(e) => {
+                        stopSliderTouchEnd(e)}}>
                         <BsXLgContainer onClick={hideDetails}>
                             <BsXLg style={{ cursor: 'pointer', maxHeight: '20px', maxWidth: '20px' }} />
                         </BsXLgContainer>

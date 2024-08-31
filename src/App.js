@@ -74,7 +74,6 @@ function Slider() {
 
   const handleTouchStart = (e) => (touchstart = e.touches[0].screenY);
   const handleTouchEnd = (e) => {
-
     if (touchstart < e.changedTouches[0].screenY) {
       gotoPrev();
     } else {
@@ -89,6 +88,10 @@ function Slider() {
     } else {
       gotoNext();
     }
+  };
+
+  const stopScrollPropagation = (e) => {
+    e.stopPropagation();
   };
 
   return (
@@ -112,7 +115,7 @@ function Slider() {
         <Five />
       </div>
       <div className="five page six">
-        <Six />
+        <Six stopSliderTouchEnd={stopScrollPropagation} />
       </div>
       <div className="six page">
         <Footer />
