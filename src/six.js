@@ -399,7 +399,7 @@ const Six = ({stopSliderTouchEnd }) => {
                         <Cardlp>{selectedDepartment.requiredSkills}</Cardlp>
                         <br/>
                         <Cardlp>{selectedDepartment.members}</Cardlp>
-                    </NewCardContent> 
+                    </NewCardContent>  
                 </NewCard>
             )}
         </SixContent>
