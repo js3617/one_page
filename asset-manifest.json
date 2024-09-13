@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.317973d5.css",
-    "main.js": "/static/js/main.9bd31c40.js",
+    "main.js": "/static/js/main.3b57792a.js",
     "static/js/453.95c4f6f8.chunk.js": "/static/js/453.95c4f6f8.chunk.js",
     "static/media/bg7.png": "/static/media/bg7.8bf53291f9e3bbceb8f7.png",
     "static/media/김희준.jpg": "/static/media/김희준.bcb71611c6887ff28b76.jpg",
@@ -46,11 +46,11 @@
     "static/media/logo.png": "/static/media/logo.dd9b151d7d32e56307cd.png",
     "index.html": "/index.html",
     "main.317973d5.css.map": "/static/css/main.317973d5.css.map",
-    "main.9bd31c40.js.map": "/static/js/main.9bd31c40.js.map",
+    "main.3b57792a.js.map": "/static/js/main.3b57792a.js.map",
     "453.95c4f6f8.chunk.js.map": "/static/js/453.95c4f6f8.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.317973d5.css",
-    "static/js/main.9bd31c40.js"
+    "static/js/main.3b57792a.js"
   ]
 }
