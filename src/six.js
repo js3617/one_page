@@ -96,7 +96,7 @@ const Cardbigp = styled.p`
     text-align: left;
     font-size: 1.8rem;
     height: 10vw;
-    text-align: center;
+    text-align: le;
     color: #fff;
     white-space: pre-line;
     @media (max-width: 768px) {
@@ -311,33 +311,37 @@ const departments = [
         title: "창업",
         motive: "창업 관련 공모전을 통해 경험을 쌓아가는 부서입니다",
         description: "창업을 위한 교육부터\n실제 창업에 대한 멘토링뿐만 아니라\n다양한 지원을 받으며 활동을 하는 부서입니다.",
-        coreActivity: "[핵심 활동]\n2023년 - 2023 학생 창업 유망팀 300 대회 교육트랙 과정을 참가하여,\n산학협력 엑스포 학생창업 페스티벌 교육트랙 미니 데모데이 참여 10팀에 선정되었으며,\n창업에 필요한 지식을 쌓고 경험을 했습니다.\n또 동의대학교에서 주관한 창업 관련 대회에 출전하여 수상했으며\n2024년 학생 창업 유망팀 300대회 성장트랙에 참가 예정입니다",
-        requiredSkills: "[필요 역량]\n창의적인 아이디어와 이를 구현할 수 있도록 노력하는 끈기, 창업에 대한 관심",
-        members: "[부서원]\n신승우, 박상현, 한유민, 정시영, 유소혜"
+        coreActivity: "[핵심 활동]\n2024 학생 창업유망팀 300+ 예비트랙 수료 중, 2024 글로벌 창업노마드 아이디어 경진대회 우수상 수상\n2024 동의대학교 창업역량강화를 위한 창업캠프 이수, 부산진구 대학연합창업아이디어 경진대회 장려상 수상\n2023년도 학생 창업유망팀 300 경진대회 교육트랙 수료, 2023년도 산학협력 엑스포 학생창업 페스티벌 교육트랙 미니 데모데이 참여 10팀 선정 \n2023 동의대학교 학생 창업 교육 및 경진대회 최우수상 수상",
+        plan: "[추후 활동 계획]\n2024 창업 교육 및 프로그램 참여",
+        requiredSkills: "[필요 역량]\n창업에 대한 관심",
+        members: "[부서원]\n신승우, 한유민, 박상현, 정시영, 유소혜"
     },
     {
         title: "로봇",
         motive: "3D프린터를 이용해 직접 하드웨어 부품 제작부터\n인공지능 로봇 개발 프로젝트 진행하는 부서입니다",
         description: "3D프린터를 활용하여\n하드웨어 부품 제작부터\n인공지능 로봇 개발 프로젝트 진행하는 부서입니다.\n",
-        coreActivity: "[핵심 활동]\n현재 로봇 팔 프로젝트와 Rc카 프로젝트를 진행중.\n로봇 팔 프로젝트에는 라이더 센서를 이용한 자율주행 기능,\n카메라 센서와 OpenCV를 이용한 객체 인식 기능,\n객체 인식 후 목적지에 도달할 수 있게 모터 제어 등의 기술 사용.\nROS로봇 운영 체제에서 개발 진행중.\nRc카 프로젝트는 라즈베리파이를 이용해서 모바일 어플로 제어하는 프로젝트로 현재는 개발 단계",
-        requiredSkills: "[필요 역량]\n로봇 프로그래밍(ROS)에 관심이 있는 사람",
-        members: "[부서원]\n김민경, 최홍록, 유소혜"
+        coreActivity: "[핵심 활동]\nROS 로봇 운영 체제를 통해 자율주행 프로젝트 진행 중, 카메라로 정보 수집 후, 객체탐지 및 위치 감지를 통해 객체가 있는 위치로 Robot Arm 트래킹 기술 구현\n라즈베리파이를 활용한 RC카 설계 완료",
+        plan: "[추후 활동 계획]\nROS 스터디 및 자율 주행 프로젝트, 새로운 프로젝트 진행 예정",
+        requiredSkills: "[필요 역량]\n로봇 및 자율 주행에 대해 관심이 있는 사람",
+        members: "[부서원]\n유소혜, 신승우, 김민경, 최홍록"
     },
     {
-        title: "AR / XR",
-        motive: "Unity를 활용하여XR/AR/VR 관련 프로젝트를\n기획하고 개발하는 부서입니다.",
+        title: "XR",
+        motive: "Unity를 활용하여XR/AR/VR 관련\n프로젝트를기획하고 개발하는 부서입니다.",
         description: "Unity를 활용하여\nXR/AR/VR 관련 프로젝트를\n기획하고 개발하는 부서입니다",
-        coreActivity: "[핵심 활동]\n2023-겨울방학 때 VR 디펜스 게임을 제작 하며Unity와 VR에 기술 스택을 쌓아 왔으며,\n2024-Vision Pro XR IDEA Challenge에 참가하여 XR에 관한 아이디어를 기획 해보며,\n제 12회-K-Hackathon에 참가하여 가상현실(VR)로 배우는 체험형 비행 안전 교육 시뮬레이션을 제작하여 본선에 출전하였습니다.\n이후 VR 디펜스 게임과 비행 안전 교육 시뮬레이션을 계속해서\n개발을 진행하여 다양한 공모전에 참가 예정입니다.",
-        requiredSkills: "[필요 역량]\nUnity, C# 등 개발 및 사용 경험이 있거나 XR/AR/VR에 대한 관심과 열정",
+        coreActivity: "[핵심 활동]\nVR로 배우는 체험형 비행 안전 교육 시뮬레이션을 개발하여 제12회 K-Hackathon 참가 (본선 진출)\n2024-Vision Pro XR IDEA Challenge 참가\n2023 겨울방학 - VR 디펜스 게임 개발",
+        plan: "VR 디펜스 게임 최적화 및 확장, 비행 안전 교육 시뮬레이션 개발",
+        requiredSkills: "[필요 역량]\nUnity Engine 사용 경험\nXR 분야 관심",
         members: "[부서원]\n한유민"
     },
     {
         title: "웹",
         motive: "UX/UI디자이너와의 협업으로 Front-End 및 Back-End 개발에 참여하여 웹 개발 경험을 키울 수 있는 부서입니다",
         description: "다양한 프레임워크를\n기반으로 웹사이트의\nUI/UX디자인을 통한 기획 및 개발을 하는 부서입니다.",
-        coreActivity: "[핵심 활동]\n현재 React 프레임워크를 기반으로 2024 동아리 웹사이트 제작\nPython Django 프레임워크를 기반으로 '나의 MBTI에 맞는 개발자 직업 찾기' 개발\nJava Spring Boot 프레임워크를 기반으로 2023동아리 홈페이지 개발\nFigma를 활용하여 웹 페이지의 와이어 프레임 및 프로토타입 제작",
-        requiredSkills: "[필요 역량]\n웹에 대한 관심, UX/UI에 대한 이해도, 직접 웹을 만들어보고 싶은 관심",
-        members: "[부서원]\n박재성, 이재언, 김봉주, 정인호, 박해인, 정지현, 조수진"
+        coreActivity: "[핵심 활동]\n개인 맞춤형 향수 추천 웹사이트 개발 중, 드라마 추천 웹사이트 개발 증\nGPT API 활용 텍스트 게임 웹 개발하여 SW 개발공모전 참가\nReact 프레임워크 기반으로 2024 동아리 웹사이트 게발\nSpring Boot 프레임워크 기반으로 2023 동아리 웹사이트 개발",
+        plan: "[추후 활동 계획]\n주제 선정 후 웹사이트 제작, 동아리 웹사이트 제작",
+        requiredSkills: "[필요 역량]\nUX/UI 디자인에 관심이 있는 사람, 웹 개발 관심 및 python, java 등 프로그래밍 언어 사용 경험",
+        members: "[부서원]\n김봉주, 박재성, 임성룡, 박해인, 정인호, 정지현, 조수진"
     }
 ];
 
@@ -395,6 +399,8 @@ const Six = ({stopSliderTouchEnd }) => {
                         <Cardbigp>{selectedDepartment.motive}</Cardbigp>
                         <br/>
                         <Cardlp>{selectedDepartment.coreActivity}</Cardlp>
+                        <br/>
+                        <Cardlp>{selectedDepartment.plan}</Cardlp>
                         <br/>
                         <Cardlp>{selectedDepartment.requiredSkills}</Cardlp>
                         <br/>
