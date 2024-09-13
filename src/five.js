@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from "react";
 import styled, { keyframes } from "styled-components";
-import bg1 from "./img/rock.png";
-import bg2 from "./img/racing.png";
-import bg3 from "./img/code.png";
-import bg4 from "./img/hotel.png";
-import bg5 from "./img/ppt.png";
-import bg6 from "./img/ppt1.png";
-import bg7 from "./img/ppt2.png";
-import bg8 from "./img/ppt3.png";
-import bg9 from "./img/ppt4.png";
-import bg10 from "./img/ppt5.png";
-import bg11 from "./img/ppt6.png";
+import bg1 from "./img/bg1.png";
+import bg2 from "./img/bg2.png";
+import bg3 from "./img/bg3.png";
+import bg4 from "./img/bg4.png";
+import bg5 from "./img/bg5.png";
+import bg6 from "./img/bg6.png";
+import bg7 from "./img/bg7.png";
+import bg8 from "./img/bg8.png";
+import bg9 from "./img/bg9.png";
+import bg10 from "./img/bg10.png";
+import bg11 from "./img/bg11.png";
+import bg12 from "./img/bg12.png";
 import study from "./img/study.png";
-import project from "./img/hand.png";
+import project from "./img/project.png";
 import activity from "./img/factivity.png";
 
 const infiniteSlide = keyframes`
@@ -141,11 +142,12 @@ const bgArr = [
   { img: bg4, key: 4 },
   { img: bg5, key: 5 },
   { img: bg6, key: 6 },
-  { img: bg7, key: 7 },
+  { img: bg7, key: 7 }, 
   { img: bg8, key: 8 },
   { img: bg9, key: 9 },
   { img: bg10, key: 10 },
   { img: bg11, key: 11 },
+  { img: bg12, key: 12 },
 ];
 
 const imgList = [study, project, activity];
@@ -155,7 +157,7 @@ const keyList = ["Study", "Project", "Activity"];
 const wordList = [
   "다양한 프로그래밍 언어를 배우고\n문제해결 능력을 키우기 위해 주기적으로\n코딩 스터디를 진행합니다.",
   "동아리 웹사이트, VR게임, RC카,\n소형 로봇팔 등을 개발하였으며,\n다양한 분야의 프로젝트에 참여합니다.",
-  "2023년도 창업 교육 수강 및\n창업 대회 참가를 하였으며,\n개발 및 아이디어 공모전 등에 참가하였습니다.",
+  "2024년도 창업 교육 수강 및\n창업 대회 참가를 하였으며,\n개발 및 아이디어 공모전 등에 참가하였습니다.",
 ];
 
 function Five() {

@@ -27,7 +27,7 @@ const P = styled.p`
   display: flex;
   line-height: 1.2;
   text-align: left;
-  font-size: 16px;
+  font-size: 15px;
   cursor: default;
   justify-content: flex-start;
   white-space: pre-line;

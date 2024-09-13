@@ -48,7 +48,7 @@ function GNB() {
             </NavLink>
           </li>
           <li className="gnb-item">
-            <a href='https://forms.gle/BZDLTmMvgiozoQ2Y7'><button className='joinbtn'>Join Us</button></a>
+            <a href='https://forms.gle/uViXK1omcxEKu7JVA'><button className='joinbtn'>Join Us</button></a>
           </li>
         </ul>
       </div>
